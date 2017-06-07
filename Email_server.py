@@ -14,7 +14,7 @@ mail = MAil(app)
 
 @app.route('/email')
 def email():
-    message = Message('Hello', sender = os.environ.get('MAIL_USERNAME', None), recipients= alejandro.escoda.umh@gmail.com
+    message = Message('Hello', sender = 'prueba@jasperalerts.com', recipients= alejandro.escoda.umh@gmail.com
     mail.send(message)
     return "SENT!",200
 
