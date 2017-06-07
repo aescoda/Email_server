@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', None)
 app.config['MAIL_PORT'] = os.environ.get('MAIL_PORT', None)
 app.config['MAIL_USE_SSL'] = os.environ.get('MAIL_SSL', None)
-ADMINS = [you@jasperalerts.com]
+ADMINS = ['you@jasperalerts.com']
 
 
 mail = MAil(app)
