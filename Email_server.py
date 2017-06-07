@@ -13,7 +13,7 @@ app.config['MAIL_USE_SSL'] = os.environ.get('MAIL_SSL', None)
 mail = MAil(app)
 
 @app.route('/email')
-def email:
+def email():
     message = Message('Hello', sender = os.environ.get('MAIL_USERNAME', None), recipients= alejandro.escoda.umh@gmail.com
     mail.send(message)
     return "SENT!",200
