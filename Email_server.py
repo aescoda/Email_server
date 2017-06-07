@@ -16,7 +16,7 @@ mail = MAil(app)
 def email:
     message = Message('Hello', sender = os.environ.get('MAIL_USERNAME', None), recipients= alejandro.escoda.umh@gmail.com
     mail.send(message)
-    return "",200
+    return "SENT!",200
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
