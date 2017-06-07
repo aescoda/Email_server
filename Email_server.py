@@ -8,13 +8,14 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', None)
 app.config['MAIL_PORT'] = os.environ.get('MAIL_PORT', None)
 app.config['MAIL_USE_SSL'] = os.environ.get('MAIL_SSL', None)
+ADMINS = [you@jasperalerts.com]
 
 
 mail = MAil(app)
 
 @app.route('/email')
 def email():
-    message = Message('Hello', sender = 'prueba@jasperalerts.com', recipients= alejandro.escoda.umh@gmail.com
+    message = Message('Hello', sender = ADMINS[0], recipients= alejandro.escoda.umh@gmail.com
     mail.send(message)
     return "SENT!",200
 
